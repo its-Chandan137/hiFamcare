@@ -1,0 +1,514 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Inter var, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  box-sizing: border-box;
+}
+
+*::selection{
+  color: white;
+  background-color: rgba(14, 164, 233, 0.482);
+}
+
+html{
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  scroll-behavior: smooth;
+}
+
+body{
+  background: rgb(15, 23, 42);
+  /* background:  rgba(22, 22, 22, 0.9); */
+  font-family: Inter var, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: rgb(148, 163, 184);
+}
+
+
+::-webkit-scrollbar{
+  /* width: 6px; */
+  display: none;
+}
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  /* background: linear-gradient(rgb(148, 163, 184),rgb(0, 71, 212), rgb(148, 163, 184)); */
+  background: linear-gradient(transparent, rgb(148, 163, 184),rgb(14, 165, 233));
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(transparent,rgb(14, 165, 233));
+}
+
+
+.slick-dots li button:before{
+  display: flex;
+  padding-top: 1px;
+  justify-content: center;
+  align-items: center;
+  color: blue !important;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background: blue;
+}
+
+.slick-dots li {
+  margin: 0%;
+  width: 50px !important;
+}
+
+.slick-arrow{
+  display: none !important;
+}
+
+
+/* font-family: Inter var, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+
+/* @font-face {
+  font-family: 'Inter var';
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'ss03';
+} */
+
+@layer components {
+  .container {
+    @apply w-full px-8 lg:p-0 lg:w-3/4 m-auto;
+  }
+  /*   Span and a tags */
+  .span {
+    @apply text-[12px] font-semibold text-primary-gray;
+  }
+  .a {
+    @apply text-[15px] font-[400] text-red-gray;
+  }
+
+  /* Buttons */
+  .batch-icon {
+    @apply w-4 h-4;
+  }
+
+  .discount-btn {
+    @apply px-4 py-2 bg-primary text-white text-xs font-semibold;
+  }
+  .feature-btn {
+    @apply px-4 py-2 bg-primary-darkBlue text-white text-xs font-semibold;
+  }
+  .slider-btn {
+    @apply w-16 h-16 bg-primary text-white flex items-center justify-center;
+  }
+}
+
+@layer utilities{
+  .noScroll::-webkit-scrollbar{
+   display: none;
+  }
+}
+
+.noScroll{
+  scrollbar-width: none;
+}
+
+.primary-btn {
+  font-size: 16px;
+  padding: 12px 30px;
+  line-height: 24px;
+  display: inline-flex;
+  border-radius: 0;
+  font-weight: 500;
+  position: relative;
+  border: 1px solid #000;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  transition: all 0.2s;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+}
+.primary-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 200%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-right 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Add transition for both properties */
+  opacity: 0;
+  border-right: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.primary-btn:hover:after {
+  right: 100%;
+  opacity: 1;
+}
+
+.secondary-btn {
+  font-size: 16px;
+  padding: 12px 30px;
+  line-height: 24px;
+  display: inline-flex;
+  border-radius: 0;
+  font-weight: 500;
+  position: relative;
+  border: 1px solid #000;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  transition: all 0.2s;
+  justify-content: center;
+  background: transparent;
+  color: #000;
+}
+.secondary-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 200%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-right 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Add transition for both properties */
+  opacity: 0;
+  border-right: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.secondary-btn:hover {
+  background-color: #000;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-right 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Add transition for both properties */
+}
+.secondary-btn:hover:after {
+  right: 100%;
+  opacity: 1;
+}
+
+/*    Navbar   */
+.menu-container {
+  background-color: #24262b;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  z-index: 100;
+  margin-top: 10px;
+}
+.menu-container.open {
+  opacity: 1;
+  transform: translateX(0);
+}
+.menu-container.closed {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+/* Add the sticky class to make the header sticky */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(20px);
+  /* border-bottom: 1px solid rgb(94, 94, 94); */
+  /* border: 0 solid #e5e7eb; */
+}
+/* Add the animation class when scrolling down */
+.header.scrolled {
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 0.5s ease;
+  z-index: 100;
+}
+
+.active-link {
+  color: #0d775e !important;
+}
+/* Keyframes for fadeInDown animation */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* product  */
+.product-btn {
+  padding: 5px 11px;
+  font-size: 12px;
+}
+.product .images {
+  position: relative;
+  overflow: hidden;
+}
+
+.product.card .overlay {
+  opacity: 0;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
+}
+
+.product.card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*  modal-overlay */
+.modal-overlay {
+  position: fixed;
+  top: 18%;
+  left: 25%;
+  width: 50%;
+  height: 500px;
+  /* background-color: gray; */
+  z-index: 50001;
+}
+.overlay-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+.slideproduct .images {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+/* testimonials */
+.testimonials {
+  position: relative;
+  background-image: url("../images/hero/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+}
+.testimonials::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.slick-dots {
+  margin-bottom: 90px !important;
+}
+.slick-dots li {
+  width: 69px !important;
+}
+.slick-slider {
+  z-index: 1;
+}
+/* Cart Model */
+.cartmodel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100vh;
+  background-color: white;
+  z-index: 1000000 !important;
+  animation: slideIn 0.3s forwards; /* Slide in animation */
+  transform: translateX(100%); /* Start offscreen */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%); /* Start offscreen */
+  }
+  to {
+    transform: translateX(0); /* Slide in */
+  }
+}
+
+.cartmodel.closing {
+  animation: slideOut 0.3s forwards; /* Slide out animation */
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0); /* Slide in */
+  }
+  to {
+    transform: translateX(100%); /* Slide out */
+  }
+}
+
+.cartoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999999 !important;
+}
+.line-container {
+  display: flex;
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.line.active {
+  background-color: #0d775e;
+}
+
+.backgroundScreens{
+  background-image: url("../assets/common/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /* overflow: hidden; */
+}
+
+.Pill{
+  background: rgba(0, 0, 0, 0.144);
+  backdrop-filter: 20px;
+
+}
+
+.QuickSearch{
+  z-index: 4;
+  transition: background-color 0.3s ease;
+  background: transparent;
+  backdrop-filter: blur(8px);
+}
+
+.fade{
+  background-image: linear-gradient(
+    transparent 12%,
+    currentColor 30%,
+    currentColor 70%,
+    transparent 86%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-attachment: fixed;
+}
+
+.fade li{
+  /* background-color: transparent; */
+  margin: 30px 0;
+  color: transparent;
+}
+
+.block{
+  backdrop-filter: blur(10px);
+}
+
+
+/* Footerrrrrr.................................-------------------------- */
+
+.footer{
+  background-color: #3586ff;
+}
+
+.footer ul li{
+  color: white;
+  cursor: pointer;
+}
+
+.footer .social-icons li a{
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.footer .social-icons li a:hover{
+  transform: translateY(-10px);
+}
+
+.footer .foot-menu li a{
+  display: inline-block;
+  opacity: 0.75;
+  transition: 0.5s;
+}
+
+.footer .foot-menu li a:hover{
+  opacity: 1;
+}
+
+.footer .waves{
+  width: 100%;
+}
+
+.footer .wave{
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -100px;
+  left: 0;
+  background: url("../images/wave.png");
+  background-size: 1000px 100px;
+}
+
+#wave1{
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave1 4s linear infinite;
+}
+
+#wave2{
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave2 4s linear infinite;
+}
+
+#wave3{
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave1 3s linear infinite;
+}
+
+#wave4{
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave2 3s linear infinite;
+}
+
+@keyframes animateWave1{
+  0%{
+    background-position-x: 1000px;
+  }
+  100%{
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave2{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 1000px;
+  }
+}
