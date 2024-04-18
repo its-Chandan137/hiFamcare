@@ -1,3 +1,5 @@
+export { About } from "../screen/About/About";
+
 export { Reports } from "../components/hero/Reports";
 
 export { pillData } from "../assets/data/data";
@@ -21,6 +23,7 @@ export { Footer } from "../components/common/Footer";
 export { Home } from "../screen/Home";
 
 export { Layout } from "../components/common/Layout";
+
 
 
 

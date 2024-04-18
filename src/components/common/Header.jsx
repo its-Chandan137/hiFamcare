@@ -126,7 +126,6 @@ export const Header = () => {
 
             </div>
 
-
             <div
               className={`icon flex items-center justify-center gap-6 
             ${!isHomePage || isScrolled ? "text-primary" : "text-white"}`}
