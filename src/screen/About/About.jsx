@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BodyTwo, Title } from "../../components/common/CustomComponents";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
-export const About = () => {  
+export const About = () => {
+  const one = () => {
+    console.log("one")
+  } 
+  function two(){
+    console.log("two")
+  } 
+
+  useEffect(() => {
+    
+  })
   return (
     <div className="w-full h-[600px] flex justify-between flex-row mt-20 p-28">
       <div className="w-3/4 h-full px-6">
@@ -29,7 +39,7 @@ export const About = () => {
           </p>
         </div>
         <div className="mt-6">
-          <button className="primary-btn">Read More</button>
+          <button onClick={two} className="primary-btn">Read More</button>
         </div>
         <div className="h-12 w-36 mt-2 py-1 px-3">
           <div className="h-full w-full flex gap-4 justify-center items-center">

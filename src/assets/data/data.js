@@ -73,4 +73,17 @@ export const menulists = [
     //   problem: problem,
     },
   ];
+
+  export const loginData = [
+    {
+        name: "Demon",
+        email: "demon@demon.com",
+        password: "0000",
+    },
+    {
+      name: "Chandan",
+      email: "chandan@gmail.com",
+      password: "1111",
+    },
+  ];
   
