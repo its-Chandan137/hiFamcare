@@ -59,8 +59,8 @@ export const Hero = () => {
 //   console.log(member)
 
   return (
-    <div>
-      <section className="h-lvh relative z-1">
+    <div className="slideContainer overflow-y-scroll">
+      <section className="h-lvh relative z-1 slides border border-t-0 border-r-0 border-l-0 border-slate-600 border-opacity-35">
         <Slider {...settings}>
           {member.map((item) => (
             <MemberDetails
@@ -75,7 +75,9 @@ export const Hero = () => {
           ))}
         </Slider>
       </section>
-      <Reports />
+      <section className="min-h-lvh slides">
+        <Reports/>
+      </section>
     </div>
   );
 };
@@ -99,7 +101,7 @@ export const MemberDetails = ({ id, title, description, relation, problem, image
                 </h1>
               </div>
             </head>
-            <div className="moniters flex flex-wrap justify-start items-start gap-7 w-full">
+            <div className="moniters flex flex-wrap justify-center items-start gap-3 w-[750px] h-[300px] border border-t-0 border-b-0 border-l-0 border-slate-600 border-opacity-35 my-4 p-2 overflow-y-auto overflow-hidden">
               {pillData.map((x, i) => (
                 <Pills key={i} data={x} className={x.size} prob={problem}/>
               ))}

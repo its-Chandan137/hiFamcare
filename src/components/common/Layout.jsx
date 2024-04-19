@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
    return (
      <div>
         <Header/>
-        <main style={{minHeight: "80vh"}}>{children}</main>
+        <main style={{minHeight: "90lvh"}}>{children}</main>
         <Footer/>
      </div>
    )

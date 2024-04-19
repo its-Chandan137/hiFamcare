@@ -1,3 +1,7 @@
+export { review } from "../components/Reviews/Reviews";
+
+export { CustomerViews } from "../components/Reviews/CustomerViews";
+
 export { About } from "../screen/About/About";
 
 export { Reports } from "../components/hero/Reports";

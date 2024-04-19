@@ -101,10 +101,11 @@ export const Login = () => {
         }
     }
   return (
+    <div className='backgroundScreens min-w-full min-h-[90lvh] text-primary-blue absolute'>
         <form onSubmit={handleSubmit} className="w-full h-full mt-24 pt-10 bg-transparent flex justify-center items-center pb-80" noValidate>
             <div className='w-[300px]'>
             <div className="flex items-center justify-center ">
-                <h1 className="text-blue-600 text-[80px] font-[600]">LogIn</h1>
+                <h1 className="text-blue-500 text-[80px] font-[600]">LogIn</h1>
             </div>
             <div className="mb-5">
                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Your email</label>
@@ -131,10 +132,11 @@ export const Login = () => {
                 <label htmlFor="remember" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
             </div>
             <div>
-                <label className="block mb-2 text-sm font-medium text-white">New to the app ? <a onClick={()=>navigate("/Register")}  className="text-blue-600 hover:underline dark:text-blue-500"> Register</a></label>
+                <label className="block mb-2 text-sm font-medium text-white">New to the app ? <a onClick={()=>navigate("/Register")}  className="text-blue-600 hover:underline dark:text-blue-500 animate-pulse"> Register</a></label>
             </div>
             <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
             </div>
         </form>
+    </div>
   )
 }

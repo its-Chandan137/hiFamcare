@@ -14,9 +14,9 @@ export const Reports = () => {
   };
   return (
     <>
-      <div id="family" className="w-full h-[80lvh]  px-16 py-5 mb-20">
+      <div id="family" className="w-full h-[80lvh]  px-16 pt-24 mb-20">
         <div className="w-full h-full flex justify-start">
-          <div className="search  h-full w-1/4 p-2 pt-0 bg-slate-900 relative pointer-events-auto hidden max-h-full lg:block z-20 inset-0 pb-10 pl-8 pr-6 overflow-y-auto">
+          <div className="search  h-[114%] w-1/4 p-2 pt-0 bg-slate-900 relative pointer-events-auto hidden lg:block inset-0 pb-10 pl-8 pr-6 overflow-y-auto">
             <div className="QuickSearch sticky top-0 h-12 w-full flex justify-center items-center">
               <button
                 onClick={openModal}

@@ -10,13 +10,13 @@ export const Subscriptions = () => {
         </div>
 
         <div className="block">
-          <div className="h-[600px] w-[320px] bg-transparent border rounded-3xl border-blue-400"></div>
+          <div className="h-[600px] w-[320px] bg-transparent border rounded-3xl border-blue-400 flex justify-center items-center">Subscription  1</div>
         </div>
         <div className="block">
-          <div className="h-[600px] w-[320px] bg-transparent border rounded-3xl border-blue-400"></div>
+          <div className="h-[600px] w-[320px] bg-transparent border rounded-3xl border-blue-400 flex justify-center items-center">Subscription  2</div>
         </div>
         <div className="block">
-          <div className="h-[600px] w-[320px] bg-transparent border rounded-3xl border-blue-400"></div>
+          <div className="h-[600px] w-[320px] bg-transparent border rounded-3xl border-blue-400 flex justify-center items-center">Subscription  3</div>
         </div>
 
       </div>

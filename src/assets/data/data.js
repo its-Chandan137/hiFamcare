@@ -67,10 +67,26 @@ export const menulists = [
     },
     {
       id: 3,
-      size: "w-[96%] h-36",
+      size: "w-[93.5%] h-36",
       lastChecked: "01.02.2023",
       title: "Blood Pressure",
     //   problem: problem,
+    },
+    {
+      id: 4,
+      size: "w-[46%]",
+      lastChecked: "13.03.2023",
+      title: "Liver",
+    //   problem: problem,
+      
+    },
+    {
+      id: 5,
+      size: "w-[46%]",
+      lastChecked: "13.03.2023",
+      title: "Heart",
+    //   problem: problem,
+      
     },
   ];
 
