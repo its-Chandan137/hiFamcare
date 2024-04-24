@@ -1,3 +1,9 @@
+export { Assistant } from "../screen/Assistant/Assistant";
+
+export { Subscribed } from "../screen/Subscribed/Subscribed";
+
+export { Profile } from "../screen/Profile/Profile";
+
 export { review } from "../components/Reviews/Reviews";
 
 export { CustomerViews } from "../components/Reviews/CustomerViews";

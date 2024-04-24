@@ -60,7 +60,7 @@ export const Hero = () => {
 
   return (
     <div className="slideContainer overflow-y-scroll">
-      <section className="h-lvh relative z-1 slides border border-t-0 border-r-0 border-l-0 border-slate-600 border-opacity-35">
+      <section className="h-lvh relative z-1 slides  border-t-0 border-r-0 border-l-0 border-slate-600 border-opacity-35">
         <Slider {...settings}>
           {member.map((item) => (
             <MemberDetails
@@ -75,7 +75,7 @@ export const Hero = () => {
           ))}
         </Slider>
       </section>
-      <section className="min-h-lvh slides">
+      <section className="slides">
         <Reports/>
       </section>
     </div>

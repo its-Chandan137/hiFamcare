@@ -73,6 +73,24 @@ const CustomNavLink2 = ({ href, className, children }) => {
   );
 };
 
+const customnavlink2 = ({ href, className, children }) => {
+  const linkStyles =
+    "text-[15px] font-medium font-sans cursor-pointer list-none";
+
+  return (
+    <NavLink
+      to={href}
+      className={({ isActive }) =>
+        isActive
+          ? `${className} ${linkStyles} text-primary-darkBlue`
+          : `${className} ${linkStyles} text-primary-gray`
+      }
+    >
+      {children}
+    </NavLink>
+  );
+};
+
 const CustomLink = ({ className, children }) => {
   const linkStyles =
     "text-[15px] font-medium text-gray-600 font-sans cursor-pointer list-none";

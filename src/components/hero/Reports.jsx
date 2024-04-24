@@ -14,9 +14,9 @@ export const Reports = () => {
   };
   return (
     <>
-      <div id="family" className="w-full h-[80lvh]  px-16 pt-24 mb-20">
+      <div id="family" className="w-full h-[80lvh]  px-16 mb-20">
         <div className="w-full h-full flex justify-start">
-          <div className="search  h-[114%] w-1/4 p-2 pt-0 bg-slate-900 relative pointer-events-auto hidden lg:block inset-0 pb-10 pl-8 pr-6 overflow-y-auto">
+          <div className="search  h-[100%] w-1/4 p-2 pt-0 bg-slate-900 relative pointer-events-auto hidden lg:block inset-0 pb-10 pl-8 pr-6 overflow-y-auto">
             <div className="QuickSearch sticky top-0 h-12 w-full flex justify-center items-center">
               <button
                 onClick={openModal}
@@ -82,7 +82,7 @@ export const Reports = () => {
               <div className="flex items-center text-sm">copy</div>
             </div>
 
-            <div className="reports fade h-full w-full flex flex-col justify-start overflow-hidden overflow-y-auto gap-2">
+            <div className="reports fade h-[80%] w-full flex flex-col justify-start overflow-hidden overflow-y-auto gap-2">
               <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
                 Reports
               </div>
@@ -130,46 +130,54 @@ export const Reports = () => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className=" w-3/5 h-[400px] p-2 relative">
+                  <button className="feature-btn bg-indigo-500 mb-5 fixed rounded-sm">
+                    Reports
+                  </button>
 
-                  <button className="feature-btn bg-indigo-500 mb-5 fixed rounded-sm">Reports</button>
-
-                <div className="pt-1">
-                  <div className="flex items-center gap-1 mt-10">
-                    <div className="reports fade h-[350px] w-full flex flex-col justify-start overflow-hidden overflow-y-scroll gap-2">
-                      <div onClick={setRepoDisplay} className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
-                        Reports
-                      </div>
-                      <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
-                        Reports
-                      </div>
-                      <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
-                        Reports
-                      </div>
-                      <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
-                        Reports
-                      </div>
-                      <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
-                        Reports
-                      </div>
-                      <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
-                        Reports
-                      </div>
-                      <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
-                        Reports
+                  <div className="pt-1">
+                    <div className="flex items-center gap-1 mt-10">
+                      <div className="reports fade h-[350px] w-full flex flex-col justify-start overflow-hidden overflow-y-scroll gap-2">
+                        <div
+                          onClick={setRepoDisplay}
+                          className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center"
+                        >
+                          Reports
+                        </div>
+                        <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
+                          Reports
+                        </div>
+                        <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
+                          Reports
+                        </div>
+                        <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
+                          Reports
+                        </div>
+                        <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
+                          Reports
+                        </div>
+                        <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
+                          Reports
+                        </div>
+                        <div className="blocks w-full min-h-28 rounded-lg bg-slate-700 flex justify-center items-center">
+                          Reports
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                </div>
-
                 <div className="w-2/5 h-[386px] overflow-hidden p-2 mt-4 bg-slate-700 rounded-md">
-
                   <div className="p-1  h-full flex flex-col gap-2">
-                    <h2 className="text-center underline underline-offset-4">Report</h2>
-                    <p className="text-gray-300">Lorem ipsum dolor sit consectetur adipisicing elit. Dolorem nulla nesciunt ducimus maiores, eum facere officia aspernatur ipsum quam ullam hic ab veritatis dolore perferendis et recusandae quia, nisi tempore?</p>
+                    <h2 className="text-center underline underline-offset-4">
+                      Report
+                    </h2>
+                    <p className="text-gray-300">
+                      Lorem ipsum dolor sit consectetur adipisicing elit.
+                      Dolorem nulla nesciunt ducimus maiores, eum facere officia
+                      aspernatur ipsum quam ullam hic ab veritatis dolore
+                      perferendis et recusandae quia, nisi tempore?
+                    </p>
                   </div>
-
                 </div>
 
                 <hr className="my-5" />

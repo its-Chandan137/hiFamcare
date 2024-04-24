@@ -1,6 +1,6 @@
 import { Header } from "./components/common/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { About, AddOns, Family, Hero, Home, Layout, Login, Register, Subscriptions } from "./router";
+import { About, AddOns, Assistant, Family, Hero, Home, Layout, Login, Profile, Register, Subscribed, Subscriptions } from "./router";
 
 
 export const App = () => {
@@ -16,6 +16,9 @@ export const App = () => {
         <Route path="/register" element={<Layout><Register/></Layout>} />
         <Route path="/subs" element={<Layout><Subscriptions/></Layout>} />
         <Route path="/about" element={<Layout><About/></Layout>} />
+        <Route path="/profile" element={<Layout><Profile/></Layout>} />
+        <Route path="/Subscribed" element={<Layout><Subscribed/></Layout>} />
+        <Route path="/assistant" element={<Layout><Assistant/></Layout>} />
       </Routes>
     </BrowserRouter>
     </>

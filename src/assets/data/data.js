@@ -103,3 +103,56 @@ export const menulists = [
     },
   ];
   
+
+  export const searchData = [
+    {
+      id: 1,
+      name: "About",
+      path: "/about",
+    },
+    {
+      id: 2,
+      name: "Home",
+      path: "/",
+    },
+    {
+      id: 3,
+      name: "Login",
+      path: "/login",
+    },
+    {
+      id: 4,
+      name: "Register",
+      path: "/register",
+    },
+    {
+      id: 5,
+      name: "Family",
+      path: "/family",
+    },
+    {
+      id: 6,
+      name: "Add-Ons",
+      path: "/add-ons",
+    },
+    {
+      id: 7,
+      name: "Profile",
+      path: "/profile",
+    },
+    {
+      id: 8,
+      name: "Subscriptions",
+      path: "/subs",
+    },
+    {
+      id: 9,
+      name: "Subscribed",
+      path: "/Subscribed",
+    },
+    {
+      id: 10,
+      name: "Assistant",
+      path: "/assistant",
+    },
+  ];

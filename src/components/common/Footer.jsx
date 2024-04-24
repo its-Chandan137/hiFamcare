@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import { NavLink } from 'react-router-dom';
 
 export const Footer = () => {
 
@@ -28,8 +29,8 @@ export const Footer = () => {
           <li><a href='#'><FaTwitter size={27}/></a></li>
         </ul>
         <ul className='foot-menu flex gap-3 w-full justify-center mt-4'>
-          <li>{isHomePage? <a href="#">Home</a> : <a href="/">Home</a>}</li>
-          <li>{isAbout? <a href="#">About</a> : <a href="/about">About</a>}</li>
+          <li>{isHomePage? <a href="#">Home</a> : <NavLink to="/">Home</NavLink>}</li>
+          <li>{isAbout? <a href="#">About</a> : <NavLink to="/about">About</NavLink>}</li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Team</a></li>
           <li><a href="#">Contact</a></li>

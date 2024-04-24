@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Title } from '../../components/common/CustomComponents';
 import { useNavigate } from 'react-router-dom'
 import { FaEye } from "react-icons/fa";
@@ -11,6 +11,10 @@ import { AccountAction } from '../../redux/slices/accountSlice';
 export const Login = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
+
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    },[]);
 
     const [open,setOpen] = useState(false)
 

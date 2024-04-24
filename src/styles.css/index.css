@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 
-
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap);
 *{
   margin: 0;
   padding: 0;
+  /* font-family: Poppins, Arial; */
   font-family: Inter var, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   box-sizing: border-box;
 }
@@ -434,6 +435,7 @@ body{
 
 .footer{
   background-color: #3586ff;
+  z-index: 999;
 }
 
 .footer ul li{
@@ -460,11 +462,11 @@ body{
   opacity: 1;
 }
 
-.footer .waves{
+.waves{
   width: 100%;
 }
 
-.footer .wave{
+.wave{
   position: absolute;
   height: 100px;
   width: 100%;
@@ -526,7 +528,7 @@ body{
   display: block;
 }
 
-.slideContainer{
+/* .slideContainer{
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -535,8 +537,8 @@ body{
 .slides{
   scroll-snap-align: start;
   height: 100lvh;
-  /* background-color: green; */
-}
+  background-color: green;
+} */
 
 .testimonials-row-1{
   animation: animateRow1 100s linear infinite;
@@ -573,4 +575,29 @@ body{
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.chat{
+  z-index: 999;
+}
+
+.chatOpen{
+  transition: 1s ease-in-out;
+  background-color: blue;
+}
+
+/* .linkShow li .innerLink :first-child{
+  opacity: 0.6;
+  background-color: red;
+} */
+
+/* ul.linkShow.suggestion-list > li:first-child .innerLink {
+  font-size: large;
+  opacity: 1;
+} */
+
+.selected {
+  font-size: large;
+  opacity: 1;
+  font-weight: 700;
 }

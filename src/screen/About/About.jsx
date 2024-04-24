@@ -61,13 +61,19 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="w-1/4 h-full border border-dashed flex justify-center items-center font-semibold">
-          Logo
+        <div className="w-1/4 h-full border border-dashed flex justify-center items-center font-semibold p-4">
+          <blockquote class="text-2xl font-semibold italic text-center text-primary-gray">
+            When you look  
+            <span class="mx-1 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-primary-darkBlue relative inline-block">
+              <span class="relative text-white">annoyed</span>
+            </span>
+              all the time, people think that you're busy.
+          </blockquote>
         </div>
       </div>
 
       <div>
-        <CustomerViews/>
+        <CustomerViews />
       </div>
     </>
   );

@@ -14,8 +14,8 @@ import { useSelector } from "react-redux";
 
 
 export const Header = () => {
-//   const isLog = useSelector((state) => state.account.isLog)
-  const isLog = false;
+  const isLog = useSelector((state) => state.account.isLog)
+  // const isLog = false;
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -100,7 +100,7 @@ export const Header = () => {
 
               {isLog == false 
 
-              ? <div className="flex gap-12">
+            ? <div className="flex gap-12">
                 <CustomNavLink2 href={"/subs"}
                 className="hover:text-sky-500 dark:hover:text-sky-400">
                   Subscriptions
@@ -118,7 +118,12 @@ export const Header = () => {
               </div> 
 
               : 
-              <div className="flex flex-col justify-center items-center">
+              <div className="flex gap-20 items-center">
+                <CustomNavLink2 href={"/Subscribed"}
+                className="hover:text-sky-500 dark:hover:text-sky-400">
+                  Subscription
+                </CustomNavLink2>
+
                 <CustomNavLink2 href={"/profile"}>
                   <BsFillPersonFill size={28}/>
                 </CustomNavLink2>
