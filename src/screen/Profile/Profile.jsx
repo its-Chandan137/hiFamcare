@@ -13,7 +13,7 @@ export const Profile = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const isLog = useSelector((state) => state.account.isLog)
+    // const isLog = useSelector((state) => state.account.isLog)
 
     const LoggedIn = () =>{
         dispatch(AccountAction.loggedin(false))

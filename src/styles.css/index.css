@@ -586,18 +586,70 @@ body{
   background-color: blue;
 }
 
-/* .linkShow li .innerLink :first-child{
-  opacity: 0.6;
-  background-color: red;
-} */
-
-/* ul.linkShow.suggestion-list > li:first-child .innerLink {
-  font-size: large;
-  opacity: 1;
-} */
-
 .selected {
   font-size: large;
   opacity: 1;
   font-weight: 700;
+  color: rgba(255, 255, 255, 0.755);
 }
+
+.moving-letters h2{
+  transition: 0.4s ease;
+}
+.moving-letters h2:hover{
+  transform: translateY(-15px);
+  transition: 0.4s ease-out;
+}
+
+
+/* -------------------rain animation------------------- */
+.rain span{
+  position: relative;
+  width: 5px;
+  height: 6px;
+  border-radius: 0 50% 50% 50%;
+  background-color: rgb(36, 176, 232);
+  /* transform: rotate(45deg) !important; */
+  margin: 0 2px;
+  animation: rainimation 15s ease-out;
+  animation-iteration-count: 10;
+  transform-origin: bottom;
+  animation-duration: calc(13s / var(--i));
+}
+.water{
+  position: absolute;
+  animation: draining 25s;
+}
+@keyframes rainimation
+{
+  0%
+  {
+    transform: translateY(0) scale(1);
+  }
+  70%
+  {
+    transform: translateY(100px) scale(1);
+  }
+  100%
+  {
+    transform: translateY(100px) scale(0);
+  }
+}
+
+@keyframes draining
+{
+  0%
+  {
+    transform: translateY(0);
+  }
+  90%
+  {
+    transform: translateY(60px);
+  }
+  100%
+  {
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------------------------------- */

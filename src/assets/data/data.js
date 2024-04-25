@@ -155,4 +155,9 @@ export const menulists = [
       name: "Assistant",
       path: "/assistant",
     },
+    {
+      id: 11,
+      name: "gitHub",
+      path: "/#",
+    }
   ];

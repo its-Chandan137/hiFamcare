@@ -84,7 +84,7 @@ export const Hero = () => {
 
 export const MemberDetails = ({ id, title, description, relation, problem, image }) => {
 
-    console.log(problem)
+    // console.log(problem)
 
   return (
     <>

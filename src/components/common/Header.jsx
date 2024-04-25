@@ -15,7 +15,6 @@ import { useSelector } from "react-redux";
 
 export const Header = () => {
   const isLog = useSelector((state) => state.account.isLog)
-  // const isLog = false;
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,9 +44,9 @@ export const Header = () => {
       document.removeEventListener("mousedown", closeMenuOutside);
       document.removeEventListener("scroll", handleScroll);
     };
-  });
+  },[]);
 
-  console.log(isLog)
+  console.log("Is User LoggedIn? : " , isLog)
 
   const isHomePage = location.pathname === "/";
 

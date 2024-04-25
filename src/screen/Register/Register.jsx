@@ -139,7 +139,16 @@ export const Register = () => {
       >
         <div className="w-[300px]">
           <div className="flex items-center justify-center">
-            <h2 className=" text-blue-500 text-[80px] font-[600]">Register</h2>
+            <div className='moving-letters flex justify-center'>
+                <h2 className="text-blue-500 text-[80px] font-[600]">R</h2>
+                <h2 className="text-blue-500 text-[80px] font-[600]">e</h2>
+                <h2 className="text-blue-500 text-[80px] font-[600]">g</h2>
+                <h2 className="text-blue-500 text-[80px] font-[600]">i</h2>
+                <h2 className="text-blue-500 text-[80px] font-[600]">s</h2>
+                <h2 className="text-blue-500 text-[80px] font-[600]">t</h2>
+                <h2 className="text-blue-500 text-[80px] font-[600]">e</h2>
+                <h2 className="text-blue-500 text-[80px] font-[600]">r</h2>
+              </div>
           </div>
           <div className="mb-5">
             <label

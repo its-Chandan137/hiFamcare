@@ -8,6 +8,7 @@ const accountSlice = createSlice({
     initialState: {
         accountList: [],
         isLog : false,
+        chatOpen : false,
     },
     accountList: [],
     reducers: {
@@ -40,7 +41,11 @@ const accountSlice = createSlice({
         },
         loggedin: (state, action) => {
             state.isLog = action.payload;   
-        }
+        },
+        openingChat: (state, action) => {
+            state.chatOpen = action.payload;
+            console.log("Directly from STATE : ", state.chatOpen);
+        },
     }
 })
 

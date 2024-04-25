@@ -109,7 +109,13 @@ export const Login = () => {
         <form onSubmit={handleSubmit} className="w-full h-full mt-24 pt-10 bg-transparent flex justify-center items-center pb-80" noValidate>
             <div className='w-[300px]'>
             <div className="flex items-center justify-center ">
-                <h1 className="text-blue-500 text-[80px] font-[600]">LogIn</h1>
+                <div className='moving-letters flex justify-center'>
+                    <h2 className="text-blue-500 text-[80px] font-[600]">L</h2>
+                    <h2 className="text-blue-500 text-[80px] font-[600]">o</h2>
+                    <h2 className="text-blue-500 text-[80px] font-[600]">g</h2>
+                    <h2 className="text-blue-500 text-[80px] font-[600]">I</h2>
+                    <h2 className="text-blue-500 text-[80px] font-[600]">n</h2>
+                </div>
             </div>
             <div className="mb-5">
                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Your email</label>

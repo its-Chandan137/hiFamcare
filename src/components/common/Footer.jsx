@@ -25,7 +25,7 @@ export const Footer = () => {
         <ul className='social-icons flex gap-3 w-full justify-center'>
           <li><a href="#"><FaInstagram size={27}/></a></li>
           <li><a href='#'><FaLinkedin size={27}/></a></li>
-          <li><a href="https://github.com/its-Chandan137"><FaGithub size={27}/></a></li>
+          <li><a href="https://github.com/its-Chandan137/hiFamcare"><FaGithub size={27}/></a></li>
           <li><a href='#'><FaTwitter size={27}/></a></li>
         </ul>
         <ul className='foot-menu flex gap-3 w-full justify-center mt-4'>

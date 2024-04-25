@@ -1,35 +1,47 @@
+import { useEffect } from 'react';
 import { Chat } from './Chat';
 import { Footer } from './Footer';
 import { Header } from './Header'
 import PropTypes from "prop-types";
+import { AccountAction } from "../../redux/slices/accountSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import { Rain } from './Rain';
 
+export const Layout = ({children}) => {
+  const chatOpen = useSelector((state) => state.account.chatOpen);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        console.log("Escape key pressed");
+        dispatch(AccountAction.openingChat(!chatOpen));
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [chatOpen, dispatch]);
+
+  return (
+    <div className='relative'>
+      <Header/>
+      <main style={{minHeight: "90lvh"}}>{children}</main>
+      <button className='chat fixed top-[40rem] right-[4rem] rounded-full w-20 h-20 overflow-hidden'>
+        <Chat/>
+      </button>
+      <div className='fixed top-[42rem] right-[4rem] w-20 h-24'>
+        <Rain/>
+      </div>
+      <Footer/>
+    </div>
+  )
+}
  
- export const Layout = ({children}) => {
-  function handleKeyDown(event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      
-    } else if (event.key === "ArrowRight") {
-      event.preventDefault();
-      setSelected(selected + 1);
-    } else if (event.key === "ArrowLeft") {
-      event.preventDefault();
-    } else if (event.key === "Escape") {
-      event.preventDefault();
-    }
-  }
-   return (
-     <div className='relative'>
-        <Header/>
-        <main style={{minHeight: "90lvh"}}>{children}</main>
-          <button className='chat fixed top-[40rem] right-[4rem] rounded-full w-20 h-20 overflow-hidden'>
-            <Chat/>
-          </button>
-        <Footer/>
-     </div>
-   )
- }
- 
- Layout.propTypes = {
-   children: PropTypes.isRequired,
- }
+Layout.propTypes = {
+  children: PropTypes.isRequired,
+}
