@@ -148,7 +148,7 @@ export const Header = () => {
 
           <div
             ref={menuRef}
-            className={`lg:hidden lg:flex lg:items-center lg:w-auto w-full p-5 absolute right-0 top-full menu-container ${
+            className={`lg:hidden lg:items-center lg:w-auto w-full p-5 absolute right-0 top-full menu-container ${
               isOpen ? "open" : "closed"
             }`}
           >
