@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { CustomNavLink2 } from "./CustomComponents";
 import LogoImg from "../../assets/common/logo.png";
+import Nigo from "../../assets/common/Nigo.png"
 import { searchData } from "../../assets/data/data";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
@@ -89,12 +90,12 @@ export const Chat = () => {
     <>
       <div
         onClick={openup}
-        className="w-full h-full flex justify-center items-center rounded-full border-2 border-transparent hover:border-primary-darkBlue transition overflow-hidden bg-slate-300"
+        className="chatCircle w-full h-full flex justify-center items-center rounded-full border-2 border-transparent hover:border-primary-gray transition bg-white"
       >
         <img
-          src={LogoImg}
+          src={Nigo}
           alt="hi famcare"
-          className="text-blue-600 hover:text-blue-700 h-12 opacity-100 hover:animate-spin transition"
+          className="chatLogo h-12 opacity-100 transition"
         />
         <div className="water waves absolute -bottom-14 opacity-80">
           <div className="wave" id="wave1"></div>
@@ -106,7 +107,7 @@ export const Chat = () => {
 
       {chatOpen ? (
         <div className="chatOpen">
-          <div className="h-[200px] w-[200px] backdrop-blur-lg bg-transparent border border-primary-darkBlue fixed top-[28rem] right-[10.9rem] rounded-2xl">
+          <div className="h-[200px] w-[200px] backdrop-blur-lg bg-slate-700 border border-primary-darkBlue fixed top-[28rem] right-[10.9rem] rounded-2xl">
             <ul className="flex flex-col gap-2 p-2 py-3 text-sm">
               <li>
                 <CustomNavLink2
@@ -129,7 +130,7 @@ export const Chat = () => {
                   {suggestion.map((user, i) => {
                     const isSelected = i === selected;
                     const className = `innerLink text-sm flex items-center gap-3 font-[cursive] dark:hover:text-sky-400 ${
-                      isSelected ? "selected" : ""
+                      isSelected ? "selected" : "" //////////////////class is added based on function change---------------------------------
                     }`;
                     return (
                       <li key={user.id}>
@@ -151,7 +152,7 @@ export const Chat = () => {
             <input
               autoFocus
               ref={inputRef}
-              className="w-[200px] h-10 mx-3 px-4 backdrop-blur-lg font-semibold border-blue-400 hover:border-opacity-75 rounded-2xl border-2 outline-none bg-transparent text-gray-400"
+              className="w-[200px] h-10 mx-3 px-4 backdrop-blur-lg bg-slate-700 font-semibold border-blue-400 hover:border-opacity-75 rounded-2xl border-2 outline-none text-white"
               type="search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}

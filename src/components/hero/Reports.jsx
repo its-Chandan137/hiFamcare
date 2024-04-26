@@ -66,7 +66,6 @@ export const Reports = () => {
                     <li>Pronouns</li>
                     <li>Pronouns</li>
                     <li>Pronouns</li>
-                    <li>Pronouns</li>
                   </ul>
                 </li>
               </ul>

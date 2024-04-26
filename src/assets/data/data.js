@@ -157,7 +157,31 @@ export const menulists = [
     },
     {
       id: 11,
-      name: "gitHub",
-      path: "/#",
-    }
+      name: "Links",
+      path: "/links",
+    },
   ];
+
+  export const linkData = [
+    {
+      id: 1,
+      name: "Github.com//HiFamCare",
+      link: "https://github.com/its-Chandan137/hiFamcare",
+      description: "HiFamCare helps you to maintain health details of your family.",
+      image: "../images/github.png",
+    },
+    {
+      id: 2,
+      name: "Tailwind.com//Docs",
+      link: "https://tailwindcss.com/docs/installation",
+      description: "Tailwind Docs for installation and use.",
+      image: "../images/tailwind.png",
+    },
+    {
+      id: 3,
+      name: "Github.com//Tailwind",
+      link: "https://github.com/tailwindlabs/tailwindcss",
+      description: "Tailwind is rapidly building custom user interfaces.",
+      image: "../images/tailwind.png",
+    }
+  ]

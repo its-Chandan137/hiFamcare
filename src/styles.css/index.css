@@ -577,6 +577,8 @@ body{
   display: flex;
 }
 
+
+/*///////////////////// --//////////----Assistant----/////////////----////////////// */
 .chat{
   z-index: 999;
 }
@@ -605,8 +607,8 @@ body{
 /* -------------------rain animation------------------- */
 .rain span{
   position: relative;
-  width: 5px;
-  height: 6px;
+  width: 3px;
+  height: 4px;
   border-radius: 0 50% 50% 50%;
   background-color: rgb(36, 176, 232);
   /* transform: rotate(45deg) !important; */
@@ -653,3 +655,34 @@ body{
 }
 
 /* ------------------------------------------------------- */
+/* ////////////////////////////////////           Assistant        ///////////////////////////////////////////////// */
+#toogleLink{
+
+}
+
+.linkPill{
+  transition: all 0.7s ease;
+}
+
+.linkPill:active{
+  transform: scale(0.96);
+}
+
+.movingBtn{
+  transition: all 0.7s ease;
+}
+
+/* .linkPill:has(:active) .movingBtn{
+  transform: translateX(4rem);
+  transition: 0.7s;
+} */
+
+/* .moveInput:has(:checked) .moveLabel{
+  transform: translateX(4rem);
+  background-color: green;
+} */
+
+input:checked + label{
+  transform: translateX(4rem);
+  background-color: green;
+}
