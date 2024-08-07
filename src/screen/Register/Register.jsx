@@ -159,6 +159,7 @@ export const Register = () => {
             </label>
 
             <input
+              autoFocus
               onChange={handleName}
               defaultValue={name}
               type="text"

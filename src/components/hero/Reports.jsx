@@ -119,6 +119,7 @@ export const Reports = () => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <input
+                  autoFocus
                   type="text"
                   className="w-[90%] h-full mx-5 px-4 border-none outline-none bg-transparent text-gray-400"
                   placeholder="Search..."
